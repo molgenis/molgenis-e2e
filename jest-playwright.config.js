@@ -1,6 +1,6 @@
 module.exports = {
   launchOptions: {
-    headless: true
+    headless: false
   },
   exitOnPageError: false, // don't exit the test on javascript errors
   contextOptions: {

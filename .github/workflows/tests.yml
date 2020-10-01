@@ -20,7 +20,7 @@ jobs:
       - uses: microsoft/playwright-github-action@v1
       - name: Install packages
         run: yarn install
-      - name: Lint test code
+      - name: Lint JavaScript tests
         run: yarn lint
       - name: Run E2E tests
         run: yarn && yarn test
@@ -28,3 +28,8 @@ jobs:
           MG_ADMIN_USER: ${{ secrets.MG_ADMIN_USER }}
           MG_ADMIN_PW: ${{ secrets.MG_ADMIN_PW }}
           MG_HOST: ${{ secrets.MG_HOST }}
+
+      - uses: actions/upload-artifact@v2
+          with:
+            name: screenshots
+            path: screenshots
