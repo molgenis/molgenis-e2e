@@ -22,6 +22,7 @@ jobs:
         run: yarn install
       - name: Run E2E tests
         run: yarn && yarn test
-      env:
-        MG_ADMIN_USER: ${{ secrets.MG_ADMIN_USER }}
-        MG_ADMIN_PW: ${{ secrets.MG_ADMIN_PW }}
+        env:
+          MG_ADMIN_USER: ${{ secrets.MG_ADMIN_USER }}
+          MG_ADMIN_PW: ${{ secrets.MG_ADMIN_PW }}
+          MG_HOST: ${{ secrets.MG_HOST }}
