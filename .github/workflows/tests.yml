@@ -10,6 +10,18 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
+        with:
+          node-version: '14'
+      - uses: actions/cache@v2
+        with:
+          path: '**/node_modules'
+          key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
+
       - uses: microsoft/playwright-github-action@v1
-      - name: Install dependencies and run tests
+      - name: Install packages
+        run: yarn install
+      - name: Run E2E tests
         run: yarn && yarn test
+      env:
+        MG_ADMIN_USER: ${{ secrets.MG_ADMIN_USER }}
+        MG_ADMIN_PW: ${{ secrets.MG_ADMIN_PW }}

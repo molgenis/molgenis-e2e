@@ -1,7 +1,8 @@
 module.exports = {
   launchOptions: {
-    headless: true
+    headless: false
   },
+  exitOnPageError: false, // don't exit the test on javascript errors
   contextOptions: {
     ignoreHTTPSErrors: true,
     viewport: {
@@ -9,6 +10,6 @@ module.exports = {
       height: 1080
     }
   },
-  browsers: ["chromium", "firefox"],
+  browsers: ['chromium'],
   devices: []
 }
