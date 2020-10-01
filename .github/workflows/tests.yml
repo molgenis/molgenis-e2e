@@ -30,6 +30,6 @@ jobs:
           MG_HOST: ${{ secrets.MG_HOST }}
 
       - uses: actions/upload-artifact@v2
-          with:
-            name: screenshots
-            path: screenshots
+        with:
+          name: screenshots
+          path: screenshots
