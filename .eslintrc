@@ -29,7 +29,7 @@
                 "no-cond-assign": ["error", "always"],
                 "one-var": "off",
                 "init-declarations": "off",
-                "no-console": "off",
+                "no-console": ["error", { "allow": ["warn"] }],
                 "no-inline-comments": "off",
                 "sort-class-members/sort-class-members": [2, {
                     "order": [

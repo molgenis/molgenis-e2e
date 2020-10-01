@@ -13,7 +13,6 @@ describe('Account Management', () => {
         expect(await page.title()).toBe('Login')
         await page.click('form[role="form"] >> text="Sign in"')
         await page.click('text=/.*Sign out.*/')
-        console.log('foo')
     })
 })
 
