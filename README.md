@@ -1,3 +1,5 @@
+![.github/workflows/tests.yml](https://github.com/molgenis/molgenis-e2e/workflows/.github/workflows/tests.yml/badge.svg)
+
 # molgenis-e2e
 
 This is a short tech demo of [Playwright](https://github.com/microsoft/playwright/)
