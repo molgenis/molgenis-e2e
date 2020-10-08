@@ -1,6 +1,6 @@
 module.exports = {
   launchOptions: {
-    headless: true
+    headless: JSON.parse(process.env.MG_HEADLESS)
   },
   exitOnPageError: false, // don't exit the test on javascript errors
   contextOptions: {
