@@ -4,7 +4,7 @@ const _ = require('./utils.js')
 
 module.exports = async () => {
     const browser = await chromium.launch({
-        headless: JSON.parse(process.env.MG_HEADLESS)
+        headless: true
     })
 
     const context = await browser.newContext()
